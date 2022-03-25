@@ -1,4 +1,4 @@
 package model
 
-class Vehicle {
+data class Vehicle (val number : Int, val color : String) {
 }
