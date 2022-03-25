@@ -48,13 +48,15 @@ open class Person (
         return "Person(matriculation=$matriculation, surname='$surname', name='$name', age=$age, birthday=$birthday, salary=$salary)"
     }
 
-    override fun afficher(msg: String) {
-        println("$this in ${this.javaClass.simpleName} say $msg")
-    }
-
-    override fun getAnciennete(age: Int): Int {
-        println("In ${this.javaClass.simpleName} : $age")
-        return age * 2
+    override fun show(msg: String) {
+        when (msg) {
+            "matriculation" -> println("$msg=$matriculation")
+            "surname" -> println("$msg=$surname")
+            "name" -> println("$msg=$name")
+            "age" -> println("$msg=$age")
+            "birthday" -> println("$msg=$birthday")
+            else -> println("Message not known : $msg")
+        }
     }
 
 }

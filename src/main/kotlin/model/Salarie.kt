@@ -16,12 +16,13 @@ data class Salarie (
         return "Salarie(matriculation=$matriculation, surname='$surname', name='$name', age=$age, birthday=$birthday, fonction=$fonction, diplome=$diplome, statusCadre=$statusCadre)"
     }
 
-    override fun afficher(msg: String) {
-        println("$this in ${this.javaClass.simpleName} say $msg")
+    override fun show(msg: String) {
+        when (msg) {
+            "fonction" -> println("$msg=$fonction")
+            "fonction" -> println("$msg=$diplome")
+            "fonction" -> println("$msg=$statusCadre")
+            else -> super.show(msg)
+        }
     }
 
-    override fun getAnciennete(age: Int): Int {
-        println("In ${this.javaClass.simpleName} : $age")
-        return age * 4
-    }
 }
