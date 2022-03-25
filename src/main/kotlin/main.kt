@@ -1,4 +1,5 @@
 import model.Person
+import model.Salarie
 import model.Vehicle
 import java.text.DateFormat
 import java.text.SimpleDateFormat
@@ -49,4 +50,14 @@ fun main(args: Array<String>) {
         println("\t $vehicle")
     }
 
+    // 6-8 Salarie -> Person
+    val salarie1 = Salarie(1, "PHAM", "Louis", 7, DATE_FORMATER.parse("30/09/2015"))
+    salarie1.fonction = "Eleve"
+    salarie1.diplome = "Elemetaire"
+    salarie1.statusCadre = false
+
+    println(salarie1)
+
+    salarie1.afficher("Hello")
+    println("${salarie1.getAnciennete(20)}");
 }
